@@ -1,18 +1,23 @@
-<h1>List of Children</h1>
-
-<table>
-  <thead>
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Date of Birth</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let child of children">
-    <td>{{ child.id }}</td>
-    <td>{{ child.name }}</td>
-    <td>{{ child.dateOfBirth }} ({{ calculateAge(child.dateOfBirth) }} years)</td>
-  </tr>
-  </tbody>
-</table>
+<div class="container">
+  <h2>List of Children</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Date of Birth</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let child of children">
+      <td>{{ child.id }}</td>
+      <td>{{ child.name }}</td>
+      <td>{{ child.dateOfBirth | date }}</td>
+      <td>
+        <button (click)="viewChild(child.id)">View Details</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
