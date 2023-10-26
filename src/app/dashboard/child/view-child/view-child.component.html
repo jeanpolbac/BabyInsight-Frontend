@@ -1,1 +1,5 @@
-<p>view-child works!</p>
+<h1>Child Details</h1>
+
+<p><strong>ID:</strong> {{ child?.id }}</p>
+<p><strong>Name:</strong> {{ child?.name }}</p>
+<p><strong>Date of Birth:</strong> {{ child.dateOfBirth }} ({{ calculateAge(child.dateOfBirth) }} years)</p>
