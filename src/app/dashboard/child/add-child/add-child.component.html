@@ -1,1 +1,14 @@
-<p>add-child works!</p>
+<div>
+  <h2>Add a child to your profile</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="child.name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input type="date" class="form-control" id="dateOfBirth" [(ngModel)]="child.dateOfBirth" name="dateOfBirth" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Child</button>
+  </form>
+</div>
