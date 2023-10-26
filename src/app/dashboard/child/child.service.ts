@@ -52,5 +52,24 @@ export class ChildService {
       return throwError(() => 'JWT token or userId not found');
     }
   }
+
+
+  getChildById(id: number): Observable<RequestChild> {
+    const jwtToken = this.authenticationService.getJwtToken();
+    const userId = this.authenticationService.getUserId().id;
+
+    if (jwtToken && userId) {
+      const headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${jwtToken}`,
+      });
+      const url = `${this.baseUrl}/${userId}/children/${id}/`;
+
+      return this.http.get<RequestChild>(url, { headers });
+    } else {
+      return throwError(() => 'JWT token or userId not found');
+    }
+  }
+
 }
 
