@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildListComponent } from './child-list.component';
+import { ViewChildComponent } from './view-child.component';
 
-describe('ChildListComponent', () => {
-  let component: ChildListComponent;
-  let fixture: ComponentFixture<ChildListComponent>;
+describe('ViewChildComponent', () => {
+  let component: ViewChildComponent;
+  let fixture: ComponentFixture<ViewChildComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ChildListComponent]
+      declarations: [ViewChildComponent]
     });
-    fixture = TestBed.createComponent(ChildListComponent);
+    fixture = TestBed.createComponent(ViewChildComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
