@@ -9,9 +9,13 @@ import {FormsModule} from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterComponent } from './authentication/register/register.component';
 import { UserDashboardComponent } from './dashboard/user-dashboard/user-dashboard.component';
-import { ChildListComponent } from './dashboard/child-list/child-list.component';
-import { VaccineListComponent } from './dashboard/vaccine-list/vaccine-list.component';
-import { AddChildComponent } from './dashboard/add-child/add-child.component';
+import { ChildListComponent } from './dashboard/child/view-child/child-list.component';
+import { VaccineListComponent } from './dashboard/vaccine/vaccine-list-overdue/vaccine-list.component';
+import { AddChildComponent } from './dashboard/child/add-child/add-child.component';
+import { ListChildrenComponent } from './dashboard/child/list-children/list-children.component';
+import { VaccineListRemainingComponent } from './dashboard/vaccine/vaccine-list-remaining/vaccine-list-remaining.component';
+import { VaccineListAdministeredComponent } from './dashboard/vaccine/vaccine-list-administered/vaccine-list-administered.component';
+import { ViewChildComponent } from './dashboard/child/view-child/view-child.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { AddChildComponent } from './dashboard/add-child/add-child.component';
     UserDashboardComponent,
     ChildListComponent,
     VaccineListComponent,
-    AddChildComponent
+    AddChildComponent,
+    ListChildrenComponent,
+    VaccineListRemainingComponent,
+    VaccineListAdministeredComponent,
+    ViewChildComponent
   ],
     imports: [
         BrowserModule,
