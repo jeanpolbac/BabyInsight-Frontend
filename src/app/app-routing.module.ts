@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent},
   { path: 'dashboard', component: UserDashboardComponent},
-  { path: 'view-child', component: ViewChildComponent},
+  { path: 'view-child/:id', component: ViewChildComponent},
   { path: 'add-child', component: AddChildComponent},
   { path: 'list-children', component: ListChildrenComponent},
   { path: 'list-remaining', component: VaccineListRemainingComponent},
