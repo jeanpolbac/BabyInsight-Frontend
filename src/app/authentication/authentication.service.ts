@@ -62,7 +62,7 @@ export class AuthenticationService {
     return this.jwtToken;
   }
 
-  getUserId(): number | null {
+  getUserId(): any | null {
     return this.userId;
   }
 }

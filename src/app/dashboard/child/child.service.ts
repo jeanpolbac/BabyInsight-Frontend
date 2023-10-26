@@ -17,15 +17,18 @@ export class ChildService {
 
   addChild(child: Child): Observable<Child> {
     const jwtToken = this.authenticationService.getJwtToken();
-    const userId = this.authenticationService.getUserId();
+    const userId = this.authenticationService.getUserId().id;
+
+
+    console.log('JWT Token:', jwtToken);
+    console.log('User ID:', userId);
 
     if (jwtToken && userId) {
       const headers = new HttpHeaders({
         'Content-Type': 'application/json',
         Authorization: `Bearer ${jwtToken}`,
       });
-      const addChildUrl = `${this.baseUrl}/api/users/${userId}/children/`;
-
+      const addChildUrl = `${this.baseUrl}/${userId}/children/`;
       return this.http.post<Child>(addChildUrl, child, { headers });
     } else {
       console.error('JWT token or userId not found');
