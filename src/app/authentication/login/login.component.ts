@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -11,7 +12,7 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private authenticationService: AuthenticationService) {
+  constructor(private authenticationService: AuthenticationService, private router: Router) {
   }
 
   onSubmit() {
@@ -19,7 +20,7 @@ export class LoginComponent {
       this.authenticationService.login(this.email, this.password).subscribe({
         next: (response) => {
           console.log('Login successful', response);
-          // Load dashboard if successful
+          this.router.navigate(['/dashboard']);
         },
         error: (error) => {
           console.log('Login failed', error);
