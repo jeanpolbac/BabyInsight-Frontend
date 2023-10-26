@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import {Child} from "./models/child.model";
 import {AuthenticationService } from "../../authentication/authentication.service";
 import {throwError} from "rxjs/internal/observable/throwError";
+import {RequestChild} from "./models/request.child.model";
 
 @Injectable({
   providedIn: 'root'
@@ -36,5 +37,20 @@ export class ChildService {
     }
   }
 
+  getChildren(): Observable<RequestChild[]> {
+    const jwtToken = this.authenticationService.getJwtToken();
+    const userId = this.authenticationService.getUserId().id;
+
+    if (jwtToken && userId) {
+      const headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${jwtToken}`,
+      });
+      const getChildrenUrl = `${this.baseUrl}/${userId}/children/`;
+      return this.http.get<RequestChild[]>(getChildrenUrl, { headers });
+    } else {
+      return throwError(() => 'JWT token or userId not found');
+    }
+  }
 }
 
