@@ -1,5 +1,5 @@
 export interface RequestChild {
-  id: number;
+  id: any;
   name: string;
   dateOfBirth: Date;
 }
