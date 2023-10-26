@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ export class RegisterComponent {
   password: string = '';
   confirmPassword: string = '';
 
-  constructor(private authenticationService: AuthenticationService) {
+  constructor(private authenticationService: AuthenticationService, private router: Router) {
   }
 
   /**
@@ -28,6 +29,7 @@ export class RegisterComponent {
       next: response => {
         console.log('Registration successful', response);
         // Load dashboard if successful
+        this.router.navigate(['/dashboard']);
       },
       error: error => {
         console.log('Registration failed', error);
