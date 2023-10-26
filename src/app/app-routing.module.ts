@@ -6,7 +6,9 @@ import { UserDashboardComponent} from "./dashboard/user-dashboard/user-dashboard
 import { ViewChildComponent } from './dashboard/child/view-child/view-child.component';
 import { AddChildComponent} from "./dashboard/child/add-child/add-child.component";
 import { ListChildrenComponent} from "./dashboard/child/list-children/list-children.component";
-import { VaccineListComponent } from './dashboard/vaccine/vaccine-list-overdue/vaccine-list.component';
+import { VaccineListRemainingComponent } from './dashboard/vaccine/vaccine-list-remaining/vaccine-list-remaining.component';
+import { VaccineListAdministeredComponent} from "./dashboard/vaccine/vaccine-list-administered/vaccine-list-administered.component";
+import { VaccineListOverdueComponent} from "./dashboard/vaccine/vaccine-list-overdue/vaccine-list-overdue.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -14,8 +16,10 @@ const routes: Routes = [
   { path: 'dashboard', component: UserDashboardComponent},
   { path: 'view-child', component: ViewChildComponent},
   { path: 'add-child', component: AddChildComponent},
-  { path: 'vaccine-list', component: VaccineListComponent},
   { path: 'list-children', component: ListChildrenComponent},
+  { path: 'list-remaining', component: VaccineListRemainingComponent},
+  { path: 'list-administered', component: VaccineListAdministeredComponent},
+  { path: 'list-overdue', component: VaccineListOverdueComponent},
 ];
 
 @NgModule({
