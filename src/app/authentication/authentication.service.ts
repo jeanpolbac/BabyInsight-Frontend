@@ -49,7 +49,7 @@ export class AuthenticationService {
    * @returns An Observable with the registration result or an error
    */
   register(email: string, password: string): Observable<any> {
-    const authInfo = { email, password };
+    const authInfo = {emailAddress: email, password: password};
     return this.http.post(`${this.baseUrl}/auth/users/register/`, authInfo)
       .pipe(
         catchError((error: HttpErrorResponse) => {
