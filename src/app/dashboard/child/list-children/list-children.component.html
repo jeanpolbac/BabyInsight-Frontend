@@ -1,1 +1,18 @@
-<p>list-children works!</p>
+<h1>List of Children</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Date of Birth</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let child of children">
+    <td>{{ child.id }}</td>
+    <td>{{ child.name }}</td>
+    <td>{{ child.dateOfBirth }} ({{ calculateAge(child.dateOfBirth) }} years)</td>
+  </tr>
+  </tbody>
+</table>
