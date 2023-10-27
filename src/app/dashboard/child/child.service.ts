@@ -1,28 +1,31 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Child} from "./models/child.model";
-import {AuthenticationService } from "../../authentication/authentication.service";
-import {throwError} from "rxjs/internal/observable/throwError";
-import {RequestChild} from "./models/request.child.model";
+import { Child } from "./models/child.model";
+import { AuthenticationService } from "../../authentication/authentication.service";
+import { throwError } from "rxjs/internal/observable/throwError";
+import { RequestChild } from "./models/request.child.model";
 
 @Injectable({
   providedIn: 'root'
 })
+/**
+ * Service for managing child-related operations.
+ */
 export class ChildService {
   private baseUrl = 'http://localhost:9092/api/users';
 
   constructor(private http: HttpClient, private authenticationService: AuthenticationService) {
   }
 
-
+  /**
+   * Adds a new child to the user's list of children.
+   * @param child - The child to be added.
+   * @returns An Observable with the added child.
+   */
   addChild(child: Child): Observable<Child> {
     const jwtToken = this.authenticationService.getJwtToken();
     const userId = this.authenticationService.getUserId().id;
-
-
-    console.log('JWT Token:', jwtToken);
-    console.log('User ID:', userId);
 
     if (jwtToken && userId) {
       const headers = new HttpHeaders({
@@ -37,6 +40,10 @@ export class ChildService {
     }
   }
 
+  /**
+   * Retrieves a list of children belonging to the user.
+   * @returns An Observable with the list of children.
+   */
   getChildren(): Observable<RequestChild[]> {
     const jwtToken = this.authenticationService.getJwtToken();
     const userId = this.authenticationService.getUserId().id;
@@ -53,7 +60,11 @@ export class ChildService {
     }
   }
 
-
+  /**
+   * Retrieves detailed information about a child by ID.
+   * @param id - The ID of the child to retrieve.
+   * @returns An Observable with the child's details.
+   */
   getChildById(id: number): Observable<RequestChild> {
     const jwtToken = this.authenticationService.getJwtToken();
     const userId = this.authenticationService.getUserId().id;
@@ -70,6 +81,4 @@ export class ChildService {
       return throwError(() => 'JWT token or userId not found');
     }
   }
-
 }
-
