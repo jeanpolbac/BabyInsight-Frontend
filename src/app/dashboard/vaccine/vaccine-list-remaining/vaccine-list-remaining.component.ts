@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute} from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
 import { VaccineService } from "../vaccine.service";
 import { Vaccine } from "../vaccine.model";
 
@@ -12,20 +12,20 @@ import { Vaccine } from "../vaccine.model";
 /**
  * Component for displaying the remaining vaccines for a child.
  */
-export class VaccineListRemainingComponent implements OnInit{
+export class VaccineListRemainingComponent implements OnInit {
   public childId!: number;
   public remainingVaccines: Vaccine[] = [];
 
-
   /**
    * Constructor for the VaccineListRemainingComponent.
-   * @param route
-   * @param vaccineService
+   * @param route - ActivatedRoute for accessing route parameters.
+   * @param vaccineService - Service for fetching vaccine data.
    */
   constructor(private route: ActivatedRoute, private vaccineService: VaccineService) {}
 
   /**
-   * Fetches the child ID from the route parameters and fetches the remaining vaccines for the child.
+   * Initializes the component by fetching the child ID from route parameters
+   * and fetching the remaining vaccines for the child.
    */
   ngOnInit() {
     this.childId = this.route.snapshot.params['id'];
