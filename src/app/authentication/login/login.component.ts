@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
-import {Router} from "@angular/router";
-
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -15,6 +14,11 @@ export class LoginComponent {
   constructor(private authenticationService: AuthenticationService, private router: Router) {
   }
 
+  /**
+   * Handle the form submission.
+   * If email and password are provided, call the login service and handle the response.
+   * If successful, navigate to the dashboard.
+   */
   onSubmit() {
     if (this.email && this.password) {
       this.authenticationService.login(this.email, this.password).subscribe({
@@ -33,7 +37,6 @@ export class LoginComponent {
     }
   }
 }
-
 
 
 
