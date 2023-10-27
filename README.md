@@ -212,6 +212,10 @@ In conclusion, overcoming these challenges in connecting Angular to the backend,
 - Dhrubo Chowdhury: [GitHub](https://github.com/Dhrubo-Chowdhury)
 - Leonardo Rodriguez: [GitHub](https://github.com/LRodriguez92)
 
+### Special Thanks
+- Gabrielle Ynara: [GitHub](https://github.com/GabrielleYnara)
+- Rick Maya: [GitHub](https://github.com/rickstylz01)
+
 ### Links
 - [Angular Documentation](https://angular.io/): Official documentation for the Angular framework, including guides, tutorials, and API reference.
 - [Bootstrap Documentation](https://getbootstrap.com/): Bootstrap documentation for creating responsive and mobile-first web applications.
@@ -222,7 +226,5 @@ In conclusion, overcoming these challenges in connecting Angular to the backend,
 - [NgRx](https://ngrx.io/): Explore NgRx, a state management library for Angular applications.
 - [Angular CLI](https://cli.angular.io/): Angular CLI documentation for managing and scaffolding Angular projects.
 
-### Special Thanks
-- Gabrielle Ynara: [GitHub](https://github.com/GabrielleYnara)
-- Rick Maya: [GitHub](https://github.com/rickstylz01)
+
 
