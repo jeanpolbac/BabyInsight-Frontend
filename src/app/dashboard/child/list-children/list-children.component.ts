@@ -13,14 +13,36 @@ export class ListChildrenComponent implements OnInit {
 
   constructor(private childService: ChildService, private router: Router) { }
 
+
+  /**
+   * Fetch children
+   */
   ngOnInit(): void {
     this.childService.getChildren().subscribe(
       data => this.children = data
     );
   }
+
+  /**
+   * Navigate to view child page
+   * @param id
+   */
   viewChild(id: number): void {
     this.router.navigate(['/view-child', id]);
   }
+
+  /**
+   * Navigate to overdue vaccines page
+   * @param childId
+   */
+  viewOverdueVaccines(childId: number) {
+    this.router.navigate(['/list-overdue', childId]);
+  }
+
+  /**
+   * Calculate age of child
+   * @param dateOfBirth
+   */
   calculateAge(dateOfBirth: Date): number {
     const birthDate = new Date(dateOfBirth);
     const today = new Date();
