@@ -12,6 +12,22 @@ This repository contains the frontend code for the BabyInsight application, an i
 
 ---
 
+## Table of Contents
+- [Related Repositories](#related-repositories)
+- [User Centric Design](#user-centric-design)
+- [Features](#features)
+- [Project Approach](#project-approach)
+- [ERD Diagram for Database Design](#erd-diagram-for-database-design)
+- [Wireframes](#wireframes)
+- [Planning Documentation](#planning-documentation)
+- [Technologies Used](#hurdles-encountered-during-development)
+- [Rest API Endpoints](#rest-api-endpoints)
+- [Hurdles Encountered During Development](#hurdles-encountered-during-development)
+- [Reflection on the Capstone Project](#reflection-on-the-capstone-project)
+- [Future Enhancements](#future-enhancements)
+- [Resources & Acknowledgements](#resources--acknowledgements)
+
+---
 
 ## Related Repositories
 For the backend part of this project, please visit [BabyInsight - Backend](https://github.com/jeanpolbac/BabyInsight-Backend).
@@ -151,24 +167,15 @@ For detailed planning and task breakdown, please visit our [Trello Board](https:
 
 ## Technologies Used
 
-1. **IntelliJ IDEA**: An integrated development environment for Java.
-  - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
-
-2. **GitHub**: A web-based platform for version control and collaboration.
-  - [GitHub](https://github.com/)
-
-3. **Postman**: An API development and testing tool.
-  - [Postman](https://www.postman.com/)
-
-4. **Angular**: A popular framework for building web applications.
-  - [Angular](https://angular.io/)
-
-5. **Bootstrap**: A front-end framework for building responsive web designs.
-  - [Bootstrap](https://getbootstrap.com/)
+- **IntelliJ IDEA**: An integrated development environment for Java. -[IntelliJ IDEA](https://www.jetbrains.com/idea/)
+- **GitHub**: A web-based platform for version control and collaboration. - [GitHub](https://github.com/)
+- **Postman**: An API development and testing tool. - [Postman](https://www.postman.com/)
+- **Angular**: A popular framework for building web applications. - [Angular](https://angular.io/)
+- **Bootstrap**: A front-end framework for building responsive web designs. - [Bootstrap](https://getbootstrap.com/)
 
 ---
 
-### REST API Endpoints with OpenAPI Documentation
+### REST API Endpoints
 Our application's functionality is exposed through a set of REST API endpoints. These endpoints are meticulously designed to provide users with seamless access to BabyInsight's features.
 Here's a glimpse of some of the key API endpoints:
 
