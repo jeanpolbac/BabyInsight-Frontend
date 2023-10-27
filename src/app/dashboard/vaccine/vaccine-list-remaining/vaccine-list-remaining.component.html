@@ -1,1 +1,16 @@
-<p>vaccine-list-remaining works!</p>
+<h2>Remaining Vaccines for Child ID: {{ childId }}</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>Vaccine Name</th>
+    <th>Recommended Age</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let vaccine of remainingVaccines">
+    <td>{{ vaccine.name }}</td>
+    <td>{{ vaccine.recommendedAge }}</td>
+  </tr>
+  </tbody>
+</table>
