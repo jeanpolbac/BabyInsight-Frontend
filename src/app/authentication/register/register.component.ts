@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
-import {Router} from "@angular/router";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+/**
+ * Component for user registration.
+ */
 export class RegisterComponent {
   email: string = '';
   password: string = '';
@@ -28,12 +31,12 @@ export class RegisterComponent {
     this.authenticationService.register(this.email, this.password).subscribe({
       next: response => {
         console.log('Registration successful', response);
-        // Load dashboard if successful
+        // Load the dashboard if registration is successful
         this.router.navigate(['/dashboard']);
       },
       error: error => {
         console.log('Registration failed', error);
-        // show an error message to the user
+        // Show an error message to the user
       }
     });
   }
