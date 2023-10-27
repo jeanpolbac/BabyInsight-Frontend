@@ -1,1 +1,18 @@
-<p>vaccine-list-overdue works!</p>
+<h3>Overdue Vaccines</h3>
+
+<table>
+  <thead>
+  <tr>
+    <th>Vaccine Name</th>
+    <th>Recommended Age</th>
+    <th>Date Administered</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let vaccine of overdueVaccines">
+    <td>{{ vaccine.name }}</td>
+    <td>{{ vaccine.recommendedAge }}</td>
+    <td>{{ vaccine.dateAdministered }}</td>
+  </tr>
+  </tbody>
+</table>
