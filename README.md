@@ -12,6 +12,22 @@ This repository contains the frontend code for the BabyInsight application, an i
 
 ---
 
+## Table of Contents
+- [Related Repositories](#related-repositories)
+- [User Centric Design](#user-centric-design)
+- [Features](#features)
+- [Project Approach](#project-approach)
+- [ERD Diagram for Database Design](#erd-diagram-for-database-design)
+- [Wireframes](#wireframes)
+- [Planning Documentation](#planning-documentation)
+- [Technologies Used](#hurdles-encountered-during-development)
+- [Rest API Endpoints](#rest-api-endpoints)
+- [Hurdles Encountered During Development](#hurdles-encountered-during-development)
+- [Reflection on the Capstone Project](#reflection-on-the-capstone-project)
+- [Future Enhancements](#future-enhancements)
+- [Resources & Acknowledgements](#resources--acknowledgements)
+
+---
 
 ## Related Repositories
 For the backend part of this project, please visit [BabyInsight - Backend](https://github.com/jeanpolbac/BabyInsight-Backend).
@@ -70,16 +86,6 @@ Our project starts with a focus on user stories, ensuring that every feature and
 - If no interactions are found, a confirmation message should be shown.
 </details>
 
-
-To model our data structure effectively, we've created an Entity-Relationship Diagram (ERD). This visual representation maps out the relationships between various entities in our system, such as users, child profiles, vaccines, and medications. The ERD serves as a blueprint for our database design, ensuring that data is organized and structured efficiently.
-
-![erd-babyinsight.png](src%2Fassets%2Ferd-babyinsight.png)
-
----
-
-## Planning Documentation
-For detailed planning and task breakdown, please visit our [Trello Board](https://trello.com/b/PMlxH7hu).
-
 ---
 
 ## Features
@@ -134,6 +140,14 @@ The true reward for this project lies in the knowledge that it may help parents 
 
 ---
 
+
+## ERD Diagram for Database Design
+To model our data structure effectively, we've created an Entity-Relationship Diagram (ERD). This visual representation maps out the relationships between various entities in our system, such as users, child profiles, vaccines, and medications. The ERD serves as a blueprint for our database design, ensuring that data is organized and structured efficiently.
+
+![erd-babyinsight.png](src%2Fassets%2Ferd-babyinsight.png)
+
+---
+
 ## Wireframes
 
 Below are wireframes illustrating the user interface design for the BabyInsight Baby Health Tracker frontend:
@@ -144,24 +158,46 @@ Below are wireframes illustrating the user interface design for the BabyInsight 
 - **Dashboard:**
   ![Dashboard](src%2Fassets%2Fbabyinsight-wireframe.png)
 
+---
+
+## Planning Documentation
+For detailed planning and task breakdown, please visit our [Trello Board](https://trello.com/b/PMlxH7hu).
 
 ---
+
 ## Technologies Used
 
-1. **IntelliJ IDEA**: An integrated development environment for Java.
-  - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+- **IntelliJ IDEA**: An integrated development environment for Java. -[IntelliJ IDEA](https://www.jetbrains.com/idea/)
+- **GitHub**: A web-based platform for version control and collaboration. - [GitHub](https://github.com/)
+- **Postman**: An API development and testing tool. - [Postman](https://www.postman.com/)
+- **Angular**: A popular framework for building web applications. - [Angular](https://angular.io/)
+- **Bootstrap**: A front-end framework for building responsive web designs. - [Bootstrap](https://getbootstrap.com/)
 
-2. **GitHub**: A web-based platform for version control and collaboration.
-  - [GitHub](https://github.com/)
+---
 
-3. **Postman**: An API development and testing tool.
-  - [Postman](https://www.postman.com/)
+### REST API Endpoints
+Our application's functionality is exposed through a set of REST API endpoints. These endpoints are meticulously designed to provide users with seamless access to BabyInsight's features.
+Here's a glimpse of some of the key API endpoints:
 
-4. **Angular**: A popular framework for building web applications.
-  - [Angular](https://angular.io/)
-
-5. **Bootstrap**: A front-end framework for building responsive web designs.
-  - [Bootstrap](https://getbootstrap.com/)
+| Entity              | HTTP Method | Endpoint                                     | Description                                 |
+| ------------------- | ----------- | -------------------------------------------- | ------------------------------------------- |
+| Dashboard           | GET         | `/dashboard/{parentID}`                     | Fetch dashboard data for a parent.          |
+| Vaccine Tracker     | GET         | `/vaccines`                                 | Fetch the pre-loaded list of standard vaccines for newborns. |
+|                     | GET         | `/vaccines/{childID}`                       | Fetch the list of vaccines for a specific child. |
+|                     | PUT         | `/vaccines/{vaccineID}`                     | Update the "administered" status and date for a specific vaccine. |
+| Medication Log      | GET         | `/medications/{childID}`                    | Fetch the list of active medications for a specific child. |
+|                     | POST        | `/medications`                              | Add a new medication entry for a child.     |
+|                     | PUT         | `/medications/{medicationID}`               | Update an existing medication entry.         |
+|                     | DELETE      | `/medications/{medicationID}`               | Delete (or archive) a specific medication entry. |
+| Interaction Checker | GET         | `/interactions?med1={medicationID1}&med2={medicationID2}` | Check for interactions between two medications. |
+| User (Parent)       | POST        | `/users`                                    | Register a new user.                        |
+|                     | PUT         | `/users/{parentID}`                         | Update user details.                         |
+|                     | GET         | `/users/{parentID}`                         | Fetch user details.                          |
+|                     | POST        | `/users/login`                              | Login endpoint.                              |
+| Child               | POST        | `/children`                                 | Add a new child for a parent.               |
+|                     | GET         | `/children/{parentID}`                      | Fetch the list of children for a specific parent. |
+|                     | PUT         | `/children/{childID}`                       | Update child details.                       |
+|                     | DELETE      | `/children/{childID}`                       | Delete a child profile.                    |
 
 ---
 
@@ -204,6 +240,41 @@ In conclusion, overcoming these challenges in connecting Angular to the backend,
 
 ---
 
+## Reflection on the Capstone Project
+
+This Capstone project has been a heck of an emotional roller coaster. There were moments of frustration, exhilaration, and everything in between. However, what I have discovered throughout this journey is that despite all of these emotions and challenges, I truly enjoy what I do.
+
+The ups and downs of this project have only strengthened my passion for software development. It's a field that constantly pushes me to learn, adapt, and overcome obstacles. It's where I find fulfillment in solving complex problems, creating innovative solutions, and seeing the tangible results of my work.
+
+While this project has tested my patience and resilience, it has also reaffirmed my commitment to pursuing a career in software engineering. It's not just a job; it's a vocation that brings me joy and satisfaction.
+
+As I navigate the ever-evolving landscape of technology and development, I carry with me the valuable experiences and lessons learned during this Capstone project. It's a reminder that even in the face of challenges, my passion for this field remains unwavering.
+
+---
+
+## Future Enhancements
+### Medication Logger
+- Allow users to log medication details for each child.
+- Include medication name, dosage, frequency, and any special instructions.
+- Option to upload a picture of the medication or prescription for reference.
+
+### Reminders to Refill
+- Send notifications to users when it's time to refill a medication.
+- Option to set custom reminder dates.
+- Integrate with calendar apps for seamless reminders.
+
+### Medication Interaction Checker
+- Implement a feature that identifies any potential issues between medications that a child might be taking.
+- Display warnings for potentially harmful interactions.
+- Option to consult a healthcare professional through the app.
+
+### RxNorm API Integration
+- Connect to the RxNorm API to retrieve a list of all medications.
+- Implement auto-complete suggestions when logging a new medication.
+- Provide additional information about each medication such as side-effects, generic alternatives, etc.
+
+---
+
 ## Resources & Acknowledgements
 ### General Assembly Instructors
 - Suresh Sigera: [GitHub](https://github.com/sureshmelvinsigera)
@@ -223,6 +294,3 @@ In conclusion, overcoming these challenges in connecting Angular to the backend,
 - [RxJS](https://rxjs.dev/): Learn about RxJS, a library for handling asynchronous operations and event handling in Angular applications.
 - [NgRx](https://ngrx.io/): Explore NgRx, a state management library for Angular applications.
 - [Angular CLI](https://cli.angular.io/): Angular CLI documentation for managing and scaffolding Angular projects.
-
-
-
