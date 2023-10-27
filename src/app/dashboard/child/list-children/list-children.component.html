@@ -16,6 +16,7 @@
       <td>{{ child.dateOfBirth | date }}</td>
       <td>
         <button (click)="viewChild(child.id)">View Details</button>
+        <button (click)="viewOverdueVaccines(child.id)">View Overdue Vaccines</button>
       </td>
     </tr>
     </tbody>
