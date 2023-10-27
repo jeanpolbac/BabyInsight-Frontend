@@ -17,8 +17,8 @@ const routes: Routes = [
   { path: 'view-child/:id', component: ViewChildComponent},
   { path: 'add-child', component: AddChildComponent},
   { path: 'list-children', component: ListChildrenComponent},
-  { path: 'list-remaining', component: VaccineListRemainingComponent},
-  { path: 'list-administered', component: VaccineListAdministeredComponent},
+  { path: 'list-remaining/:id', component: VaccineListRemainingComponent},
+  { path: 'list-administered/:id', component: VaccineListAdministeredComponent},
   { path: 'list-overdue/:id', component: VaccineListOverdueComponent },
 ];
 
