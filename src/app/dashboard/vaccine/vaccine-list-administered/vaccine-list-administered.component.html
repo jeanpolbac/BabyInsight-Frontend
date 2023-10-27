@@ -1,0 +1,17 @@
+<!-- Table for displaying administered vaccines -->
+<table class="table table-striped table-hover table-bordered mt-3">
+  <thead class="bg-light text-dark">
+  <!-- Table header row -->
+  <tr>
+    <th scope="col">Vaccine Name</th>
+    <th scope="col">Date Administered</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- Loop through administered vaccines and display each in a row -->
+  <tr *ngFor="let vaccine of administeredVaccines">
+    <td>{{ vaccine.name }}</td>
+    <td>{{ vaccine.dateAdministered }}</td>
+  </tr>
+  </tbody>
+</table>

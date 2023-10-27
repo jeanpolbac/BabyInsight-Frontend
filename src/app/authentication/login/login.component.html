@@ -1,0 +1,15 @@
+<!-- Login Form -->
+<div class="container mt-6 pt-6 center-container" id="login-container">
+  <h1 class="display-4">BabyInsight - Login</h1>
+  <form (ngSubmit)="onSubmit()" class="pt-4">
+    <div class="form-group mb-4">
+      <label for="exampleInputEmail1" style="font-size: 1.3rem">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="email" name="email" required style="font-size: 1.3rem">
+    </div>
+    <div class="form-group mb-4">
+      <label for="exampleInputPassword1" style="font-size: 1.3rem">Password</label>
+      <input type="password" class="form-control rounded" id="exampleInputPassword1" placeholder="Password" [(ngModel)]="password" name="password" required style="font-size: 1.3rem">
+    </div>
+    <button type="submit" class="btn btn-lg rounded" style="background-color: #B8E4A3; color: #333; font-size: 1.3rem;">Submit</button>
+  </form>
+</div>
