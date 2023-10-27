@@ -1,5 +1,5 @@
+<!-- Container for displaying a table of children with actions -->
 <div class="container">
-  <h2>List of Children</h2>
   <table class="table">
     <thead>
     <tr>
@@ -10,16 +10,25 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let child of children">
+    <!-- Loop through children and display each child in a row -->
+    <tr *ngFor="let child of children; let i = index">
       <td>{{ child.id }}</td>
       <td>{{ child.name }}</td>
       <td>{{ child.dateOfBirth | date }}</td>
       <td>
-        <button (click)="viewChild(child.id)">View Details</button>
-        <button (click)="viewOverdueVaccines(child.id)">View Overdue Vaccines</button>
-        <button (click)="viewRemainingVaccines(child.id)">View Remaining Vaccines</button>
-        <button (click)="viewAdministeredVaccines(child.id)">View Administered Vaccines</button>
-
+        <div class="dropdown">
+          <!-- Button to trigger dropdown menu -->
+          <button class="btn btn-secondary dropdown-toggle" type="button" (click)="toggleDropdown(i)">
+            Actions
+          </button>
+          <!-- Dropdown menu for child-related actions -->
+          <div class="dropdown-menu" [ngClass]="{'show': dropdownStates[i]}">
+            <a class="dropdown-item" (click)="viewChild(child.id)">View Details</a>
+            <a class="dropdown-item" (click)="viewOverdueVaccines(child.id)">View Overdue Vaccines</a>
+            <a class="dropdown-item" (click)="viewRemainingVaccines(child.id)">View Remaining Vaccines</a>
+            <a class="dropdown-item" (click)="viewAdministeredVaccines(child.id)">View Administered Vaccines</a>
+          </div>
+        </div>
       </td>
     </tr>
     </tbody>
