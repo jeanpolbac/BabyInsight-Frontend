@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 import { VaccineService} from "../vaccine.service";
 import { Vaccine } from '../vaccine.model';
 
@@ -9,13 +10,16 @@ import { Vaccine } from '../vaccine.model';
 })
 export class VaccineListOverdueComponent implements OnInit{
   overdueVaccines: Vaccine[] = [];
-  childId: number = 1;
+  childId!: number;
 
-  constructor(private vaccineService: VaccineService) {
+  constructor(private vaccineService: VaccineService, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    this.fetchOverdueVaccines();
+    this.route.params.subscribe(params => {
+      this.childId = +params['id'];
+      this.fetchOverdueVaccines();
+    });
   }
 
 
