@@ -1,17 +1,14 @@
-<div>
-  <h2>Add a child to your profile</h2>
-  <form (ngSubmit)="onSubmit()">
-    <!-- Form group for child's name input -->
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" class="form-control" id="name" [(ngModel)]="child.name" name="name" required>
+<div class="container mt-6 pt-6 center-container" id="addChild-container">
+  <h1 class="display-4">BabyInsight - Add a Child</h1>
+  <form (ngSubmit)="onSubmit()" class="pt-4">
+    <div class="form-group mb-4">
+      <label for="name" style="font-size: 1.3rem">Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="child.name" name="name" required style="font-size: 1.3rem">
     </div>
-    <!-- Form group for child's date of birth input -->
-    <div class="form-group">
-      <label for="dateOfBirth">Date of Birth:</label>
-      <input type="date" class="form-control" id="dateOfBirth" [(ngModel)]="child.dateOfBirth" name="dateOfBirth" required>
+    <div class="form-group mb-4">
+      <label for="dateOfBirth" style="font-size: 1.3rem">Date of Birth</label>
+      <input type="date" class="form-control" id="dateOfBirth" [(ngModel)]="child.dateOfBirth" name="dateOfBirth" required style="font-size: 1.3rem">
     </div>
-    <!-- Submit button to add a child -->
-    <button type="submit" class="btn btn-primary">Add Child</button>
+    <button type="submit" class="btn btn-lg rounded" style="background-color: #B8E4A3; color: #333; font-size: 1.3rem;">Add Child</button>
   </form>
 </div>
