@@ -1,18 +1,19 @@
-<div class="container">
-  <h1>BabyInsight - Registration</h1>
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="email">Email address</label>
-      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="email" name="email" required>
+<!-- Registration Form -->
+<div class="container mt-6 pt-6 center-container">
+  <h1 class="display-4">BabyInsight - Registration</h1>
+  <form (ngSubmit)="onSubmit()" class="pt-4">
+    <div class="form-group mb-4">
+      <label for="exampleInputEmail1" style="font-size: 1.3rem">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="email" name="email" required style="font-size: 1.3rem">
     </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+    <div class="form-group mb-4">
+      <label for="exampleInputPassword1" style="font-size: 1.3rem">Password</label>
+      <input type="password" class="form-control rounded" id="exampleInputPassword1" placeholder="Password" [(ngModel)]="password" name="password" required style="font-size: 1.3rem">
     </div>
-    <div class="form-group">
-      <label for="confirmPassword">Confirm Password</label>
-      <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+    <div class="form-group mb-4">
+      <label for="confirmPassword" style="font-size: 1.3rem">Confirm Password</label>
+      <input type="password" class="form-control rounded" id="confirmPassword" placeholder="Confirm Password" [(ngModel)]="confirmPassword" name="confirmPassword" required style="font-size: 1.3rem">
     </div>
-    <button type="submit" class="btn btn-primary">Register</button>
+    <button type="submit" class="btn btn-lg rounded" style="background-color: #B8E4A3; color: #333; font-size: 1.3rem;">Register</button>
   </form>
 </div>
