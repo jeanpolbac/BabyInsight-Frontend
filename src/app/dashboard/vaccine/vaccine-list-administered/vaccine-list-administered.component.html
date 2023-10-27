@@ -1,1 +1,20 @@
-<p>vaccine-list-administered works!</p>
+<h1>Administered Vaccines</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Recommended Age</th>
+    <th>Date Administered</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let vaccine of administeredVaccines">
+    <td>{{ vaccine.vaccineId }}</td>
+    <td>{{ vaccine.name }}</td>
+    <td>{{ vaccine.recommendedAge }}</td>
+    <td>{{ vaccine.dateAdministered }}</td>
+  </tr>
+  </tbody>
+</table>
