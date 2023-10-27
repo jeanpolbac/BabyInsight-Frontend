@@ -70,9 +70,7 @@ Our project starts with a focus on user stories, ensuring that every feature and
 - If no interactions are found, a confirmation message should be shown.
 </details>
 
----
 
-## User-Centric Design
 To model our data structure effectively, we've created an Entity-Relationship Diagram (ERD). This visual representation maps out the relationships between various entities in our system, such as users, child profiles, vaccines, and medications. The ERD serves as a blueprint for our database design, ensuring that data is organized and structured efficiently.
 
 ![erd-babyinsight.png](src%2Fassets%2Ferd-babyinsight.png)
