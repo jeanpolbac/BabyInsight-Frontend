@@ -40,6 +40,22 @@ export class ListChildrenComponent implements OnInit {
   }
 
   /**
+   * Navigate to remaining vaccines page
+   * @param childId
+   */
+  viewRemainingVaccines(childId: number): void {
+    this.router.navigate([`/list-remaining/${childId}`]);
+  }
+
+  /**
+   * Navigate to administered vaccines page
+   * @param childId
+   */
+  viewAdministeredVaccines(childId: number): void {
+    this.router.navigate([`/list-administered/${childId}`]);
+  }
+
+  /**
    * Calculate age of child
    * @param dateOfBirth
    */
