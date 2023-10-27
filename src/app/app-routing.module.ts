@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'list-children', component: ListChildrenComponent},
   { path: 'list-remaining', component: VaccineListRemainingComponent},
   { path: 'list-administered', component: VaccineListAdministeredComponent},
-  { path: 'list-overdue', component: VaccineListOverdueComponent},
+  { path: 'list-overdue/:id', component: VaccineListOverdueComponent },
 ];
 
 @NgModule({
